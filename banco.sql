@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS faccao;
+
+USE faccao;
+
+CREATE TABLE IF NOT EXISTS vendas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    discord_user_id VARCHAR(30) NOT NULL,
+    discord_user_name VARCHAR(100) NOT NULL,
+    item VARCHAR(100) NOT NULL,
+    quantidade INT NOT NULL,
+    valor DECIMAL(12,2) NOT NULL,
+    cliente VARCHAR(100) NOT NULL,
+    data_venda TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
